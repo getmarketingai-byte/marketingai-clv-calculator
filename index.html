@@ -674,6 +674,7 @@
   }
 
   function calcSimple() {
+    if (typeof gtag === "function") { gtag("event", "calculator_submit", {calculator_name: "clv_calculator", page_title: document.title}); }
     const aov = parseFloat(document.getElementById('avg-order').value);
     const freq = parseFloat(document.getElementById('purchase-freq').value);
     const ls = parseFloat(document.getElementById('lifespan').value);
@@ -698,6 +699,7 @@
   }
 
   function calcMargin() {
+    if (typeof gtag === "function") { gtag("event", "calculator_submit", {calculator_name: "clv_calculator", page_title: document.title}); }
     const aov = parseFloat(document.getElementById('avg-order-m').value);
     const freq = parseFloat(document.getElementById('purchase-freq-m').value);
     const ls = parseFloat(document.getElementById('lifespan-m').value);
@@ -724,6 +726,7 @@
   }
 
   function calcRatio() {
+    if (typeof gtag === "function") { gtag("event", "calculator_submit", {calculator_name: "clv_calculator", page_title: document.title}); }
     const ltv = parseFloat(document.getElementById('ltv-input').value);
     const cac = parseFloat(document.getElementById('cac-input').value);
 
